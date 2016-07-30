@@ -1,0 +1,6 @@
+<% if @messages.any? %>
+  $('#messages').append('<%= j render @messages %>');
+  if (($(".message").last().position().top - $(document.body).scrollTop()) < 1500)
+    $("body").animate({scrollTop: $(".message").last().position().top},500);
+<% end %>
+Poller.poll();

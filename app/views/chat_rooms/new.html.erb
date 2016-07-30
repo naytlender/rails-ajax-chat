@@ -1,0 +1,6 @@
+<h3>New chat room</h3>
+<%= form_for @chat_room do |f| %>
+  <%= f.text_field 'title', placeholder: "Title", class: 'form-control',
+    autofocus: true %>
+  <%= f.submit 'Ok', class: 'btn btn-primary' %>
+<% end %>

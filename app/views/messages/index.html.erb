@@ -1,0 +1,17 @@
+<h4><%= @chat_room.title.capitalize %></h4><br/>
+
+<div id="messages" data-room-id="<%= @chat_room.id %>">
+  <% if @messages.any? %>
+    <% @messages.each do |message| %>
+      <%= render partial: message %>
+    <% end %>
+  <% end %>
+</div>
+<br/>
+
+<%= form_for [@chat_room, Message.new], remote: true do |f| %>
+  <div class="form-group">
+    <%= f.text_field :body, class: "form-control" %>
+  </div>
+  <%= f.submit 'Ok', class: 'btn btn-primary' %>
+<% end %>

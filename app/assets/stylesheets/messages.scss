@@ -1,0 +1,30 @@
+// Place all the styles related to the messages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.media-object {
+  max-height: 50px;
+}
+
+.wrapper {
+  margin: 5px;
+}
+
+.bordered {
+  border: 1px solid #999999;
+  border-radius: 1px;
+  padding: 4px;
+}
+
+.pull-right {
+  right: 10px;
+}
+
+.media-body {
+  width: 100%;
+}
+
+p.message-body {
+  width: auto;
+  display: inline-block;
+  word-break: break-word;
+}

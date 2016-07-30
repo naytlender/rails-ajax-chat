@@ -1,0 +1,14 @@
+<div class="media wrapper message" data-id="<%= message.id %>">
+  <div class="media-left">
+    <%= image_tag(message.user.avatar.url, class: 'media-object') %>
+  </div>
+  <div class="media-body">
+    <h5 class="media-heading bordered">
+      <b><%= message.user.name %></b>
+      <span class='pull-right'>
+        <%= message.created_at.to_formatted_s(:db) %>
+      </span>
+    </h5>
+      <p class="message-body"><%= message.body %></p>
+  </div>
+</div>

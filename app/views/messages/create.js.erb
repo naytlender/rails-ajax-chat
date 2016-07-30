@@ -1,0 +1,9 @@
+Poller.clear();
+
+<% if @message.new_record? %>
+  alert('Your message cannot be saved.');
+<% else %>
+  $('#message_body').val('');
+<% end %>
+
+Poller.poll();
